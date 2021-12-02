@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    xmlns:tool="http://schemas.android.com/tools">
+    android:padding="8dp">
 
     <CheckBox
         android:id="@+id/check_box_completed"
@@ -16,25 +16,25 @@
         android:id="@+id/text_view_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Example item mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmnmm"
-        android:gravity="center_vertical"
-        android:textColor="@color/black"
         android:layout_alignTop="@id/check_box_completed"
         android:layout_alignBottom="@id/check_box_completed"
+        android:layout_toStartOf="@id/label_priority"
         android:layout_toEndOf="@id/check_box_completed"
-        android:layout_toStartOf="@id/label_priority"/>
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        tool:text="@string/example_text" />
 
 
     <ImageView
+        android:id="@+id/label_priority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/label_priority"
-        android:src="@drawable/ic_priority"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:src="@drawable/ic_priority" />
 </RelativeLayout>
 
-<!--
-chek_box^
-android:gravity="center_vertical"-->
+    <!--
+    chek_box^
+    android:gravity="center_vertical"-->
