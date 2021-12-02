@@ -8,6 +8,9 @@
         <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/drawable/ic_add.xml" value="0.18888888888888888" />
         <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18888888888888888" />
         <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/layout/fragment_add_edit_task.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/layout/fragment_tasks.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/geka1/AndroidStudioProjects/ToDoFinalTask/app/src/main/res/layout/item_task.xml" value="0.33" />
       </map>
     </option>
   </component>
