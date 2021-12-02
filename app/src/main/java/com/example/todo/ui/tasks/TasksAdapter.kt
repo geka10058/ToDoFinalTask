@@ -10,6 +10,7 @@ import com.example.todo.data.Task
 import com.example.todo.databinding.ItemTaskBinding
 
 class TasksAdapter : ListAdapter<Task, TasksAdapter.TasksViewHolder>(DiffCallback()) {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TasksViewHolder {
         val binding = ItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TasksViewHolder(binding)
