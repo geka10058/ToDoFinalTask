@@ -10,7 +10,6 @@ import com.example.todo.data.TaskDao
 import com.example.todo.ui.ADD_TASK_RESULT_OK
 import com.example.todo.ui.EDIT_TASK_RESULT_OK
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.receiveAsFlow
@@ -83,10 +82,16 @@ class TasksViewModel @ViewModelInject constructor(
         tasksEventChannel.send(TasksEvent.ShowTaskSavedConfirmationMessage(text))
     }
 
+    fun onDeleteAllCompletedClick() = viewModelScope.launch {
+        tasksEventChannel.send(TasksEvent.NavigateToDeleteAllCompletedScreen)
+    }
+
     sealed class TasksEvent{
         object NavigateToAddTaskScreen : TasksEvent()
         data class NavigateToEditTaskScreen(val task: Task) : TasksEvent()
         data class ShowUndoDeleteTaskMessage(val task: Task) : TasksEvent()
         data class ShowTaskSavedConfirmationMessage(val msg: String) : TasksEvent()
+        object NavigateToDeleteAllCompletedScreen : TasksEvent()
+
     }
 }
